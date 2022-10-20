@@ -2,8 +2,20 @@ require('dotenv').config();
 const axios = require('axios');
 const dayjs = require('dayjs');
 
+// Parse Date
+dateStr = null
+if (process.argv.length > 2) {
+    dateStr = process.argv[2];
+    // validate date string
+    dateReg = /^\d{4}-\d{2}-\d{2}$/
+    if (!dateReg.test(dateStr)) {
+        console.log('invalid date');
+        process.exit(0);
+    }
+}
+let date  = getParsedDate(dateStr);
+
 // 建立 Journal 資料
-let date = getParsedDate();
 createJournal(date)
     .then(res => {
         const JOURNAL_ID = res.data.id;
