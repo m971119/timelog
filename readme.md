@@ -3,7 +3,7 @@ A tool to create my notion journal pages and timelog pages which are related to 
 
 This tool creates
 1. One Journal page 
-2. 34 TimeLog pages (One page every 0.5h from 07:00 - 08:00)
+2. 34 TimeLog pages (One page every 0.5h from 07:00 - 24:00)
 
 
 ## Set up
